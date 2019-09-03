@@ -1,0 +1,12 @@
+zuul:
+  routes:
+    ###定义服务转发规则
+    api-a:
+       ###当客户端发送请求 localhost:8300/api-member开头的都会转发到会员服务上面
+      path: /api-member/**
+          ###服务别名 zuul网关默认整合ribbon  会自动实现负载均衡轮侧效果
+      serviceId: app-itmayi-member-impl
+    api-b:
+       ###当客户端发送请求 localhost:8300/api-order 开头的都会转发到订单服务上面
+      path: /api-order/**
+      serviceId: app-itmayi-order-fegin
