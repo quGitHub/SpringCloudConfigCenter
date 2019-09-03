@@ -12,5 +12,5 @@ zuul:
       serviceId: app-itmayi-order-fegin
     api-c:
        ###当客户端发送请求 localhost:8300/api-order 开头的都会转发到订单服务上面
-      path: /api-pay/**
+      path: /api-pays/**
       serviceId: app-itmayi-order-pay
